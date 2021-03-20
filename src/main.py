@@ -32,7 +32,7 @@ def main():
     except:
         raise ValueError("Failed to build data loader for test.")
     
-    generate(epoch=epoch, cfg=cfg, model=model, data_loader=test_data_loader, device=device)
+    generate(cfg=cfg, model=model, data_loader=test_data_loader, device=device)
 
 
 if __name__ == "__main__":

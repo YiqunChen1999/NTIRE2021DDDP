@@ -14,7 +14,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from tqdm import tqdm
 
-from utils import utils, metrics
+from utils import utils
 
 @torch.no_grad()
 def generate(
@@ -27,7 +27,7 @@ def generate(
 ):
     model.eval()
     log_info = print
-    with utils.log_info(msg="Generate results", level="INFO", state=True, logger=logger):
+    with utils.log_info(msg="Generate results", level="INFO", state=True):
         pbar = tqdm(total=len(data_loader), dynamic_ncols=True)
         for idx, data in enumerate(data_loader):
             start_time = time.time()

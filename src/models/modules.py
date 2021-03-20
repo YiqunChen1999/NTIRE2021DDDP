@@ -12,7 +12,6 @@ sys.path.append(os.path.join(os.getcwd(), "src"))
 import torch, torchvision
 import torch.nn as nn
 import torch.nn.functional as F
-from torch.nn.modules.utils import _pair
 from collections import OrderedDict
 
 from utils import utils

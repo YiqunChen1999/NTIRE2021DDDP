@@ -13,18 +13,21 @@
 
 5. uncompress and orginaze the NTIRE 2021 Defocus Deblurring Test data in a folder as following:
 ```
-test:
-    source:
-        img_idx_0.png
-        img_idx_1.png
-        ...
+DualPixelNTIRE2021:
+    test:
+        source:
+            img_idx_0.png
+            img_idx_1.png
+            ...
 ```
 
 6. modify 45th line in /path/to/root/of/project/src/configs/configs.py:
 
-`"FolderName": "/path/to/your/dataset/folder"`
+`"DualPixelNTIRE2021": "/path/to/your/dataset"`
 
-7. download the pre-trained [parameters](https://github.com/yiqunchen1999/NTIRE2021DDDP) into /path/to/root/of/project/checkpoints/Test
+for example, if you put images in: `/data/DualPixelNTIRE2021/test/source/`, then the 44th line should be: `"DualPixelNTIRE2021": "/data/DualPixelNTIRE2021/"`.
+
+7. download the pre-trained [parameters](https://mailsdueducn-my.sharepoint.com/:u:/g/personal/201700181055_mail_sdu_edu_cn/EZqI7rKgTMRKmDpdS1Puy3kBOB3m7PgmGtO8srW0L18N5w?e=evqfii) into /path/to/root/of/project/checkpoints/Test
 
 8. the following command should generates results in folder /path/to/root/of/project/results/Test/NTIRE2021NHHAZE/results
 

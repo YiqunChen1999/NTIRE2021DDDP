@@ -34,7 +34,7 @@ def generate(
             output, *_ = utils.inference(model=model, data=data, device=device)
 
             for i in range(output.shape[0]):
-                save_dir = os.path.join(cfg.SAVE.DIR, phase)
+                save_dir = os.path.join(cfg.SAVE.DIR, "results")
                 if not os.path.exists(save_dir):
                     os.makedirs(save_dir)
                 path2file = os.path.join(save_dir, data["img_idx"][i]+"_g.png")
